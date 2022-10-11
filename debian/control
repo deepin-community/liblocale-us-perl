@@ -1,0 +1,23 @@
+Source: liblocale-us-perl
+Section: perl
+Priority: optional
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Damyan Ivanov <dmn@debian.org>,
+ Fabrizio Regalli <fabreg@fabreg.it>
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: libdata-section-simple-perl,
+ perl
+Standards-Version: 3.9.6
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/liblocale-us-perl.git
+Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/liblocale-us-perl.git
+Homepage: https://metacpan.org/release/Locale-US
+Testsuite: autopkgtest-pkg-perl
+
+Package: liblocale-us-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends},
+ libdata-section-simple-perl
+Description: module for United States state identification
+ Locale::US provides methods allowing United States' two-letter
+ state identification parsing from state code to state name
+ and vice versa.

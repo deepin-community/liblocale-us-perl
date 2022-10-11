@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+
+%:
+	dh $@
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod 755 $(TMP)/usr/share/perl5/Locale/kruft2codes.pl
